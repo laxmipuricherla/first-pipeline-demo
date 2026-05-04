@@ -11,7 +11,7 @@ sudo bash -c 'cat > /var/www/html/index.html <<EOF
 </head>
 <body>
 <h1>Welcome to My Simple Web App 🚀</h1>
-<p>Deployed correctly using Shell Script</p>
+<p>This is my first Devops Jenkins Build Deployed correctly using Shell Script</p>
 </body>
 </html>
 EOF'
