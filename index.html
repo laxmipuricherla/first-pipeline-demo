@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Update system
+sudo dnf update -y
+
+# Install Apache (httpd)
+sudo dnf install httpd -y
+
+# Start and enable Apache
+sudo systemctl start httpd
+sudo systemctl enable httpd
+
+# Create a simple web page
+echo "<html>
+<head><title>My Web App</title></head>
+<body>
+<h1>Welcome to My Simple Web App 🚀</h1>
+<p>Deployed using Shell Script</p>
+</body>
+</html>" | sudo tee /var/www/html/index.html
+
+# Set permissions
+sudo chmod 644 /var/www/html/index.html
+
+# Restart Apache
+sudo systemctl restart httpd
+
+echo "✅ Web App deployed successfully!"
+echo "🌐 Access it at: http://<your-ec2-public-ip>"
